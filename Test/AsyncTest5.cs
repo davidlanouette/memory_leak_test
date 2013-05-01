@@ -225,12 +225,13 @@ namespace Test
 		
 		private void HandleGetContextException(AggregateException exception)
 		{
-			logger.Info("OOPS! " + exception.Message);
+			logger.InfoException("OOPS! GetContext", exception);
+
 		}
-		
+
 		private static void HandleRequestHandlerTaskException(AggregateException exception)
 		{
-			logger.Info("OOPS! " + exception.Message);
+			logger.InfoException("OOPS! RequestHandlerTask", exception);
 		}
 	}
 }
